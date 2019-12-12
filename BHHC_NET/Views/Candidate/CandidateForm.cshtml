@@ -1,0 +1,25 @@
+﻿@model BHHC_NET.Models.Candidate
+@{
+    ViewBag.Title = "CandidateForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Candidate Form</h2>
+
+@using (Html.BeginForm("Save", "Candidate"))
+{
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.FirstName, "First Name")
+        @Html.TextBoxFor(x => x.FirstName)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.LastName, "Last Name")
+        @Html.TextBoxFor(x => x.LastName)
+
+
+    </div>
+    @Html.HiddenFor(x => x.Id)
+    <button class="btn btn-primary" type="submit">Save</button>
+
+}

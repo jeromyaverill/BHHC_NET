@@ -1,0 +1,44 @@
+﻿@model BHHC_NET.Models.QuestionAnswer
+@{
+    ViewBag.Title = "QuestionAnswerForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Question Answer Form</h2>
+
+<form id="qa" name="qa" method="post">
+    <div class="form-group">
+            @Html.LabelFor(x => x.Question, "Question")
+            @Html.TextBoxFor(x => x.Question, new { name = "Question"})
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.Answer, "Answer")
+            @Html.TextBoxFor(x => x.Answer, new {name="Answer"})
+        </div>
+
+        <button type="submit" class="btn-link js-create">Create New</button>
+
+        @Html.HiddenFor(x => x.Id)
+</form>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $('input#submitButton').click( function() {
+                $.ajax({
+                    url: "/api/QuestionAnswers/",
+                    type: 'post',
+                    dataType: 'application/json',
+                    data: $("#qa").serialize(),
+                    success: function(data) {
+                        // ... do something with the data...
+                    }
+                });
+            });
+
+
+
+                
+    </script>
+}

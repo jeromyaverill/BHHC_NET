@@ -1,0 +1,29 @@
+﻿@model BHHC_NET.ViewModels.QuestionViewModel
+@{
+    ViewBag.Title = "QuestionForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Question Form</h2>
+
+@using (Html.BeginForm("Save", "Question"))
+{
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.Question.Text, "Question")
+        @Html.TextBoxFor(x => x.Question.Text)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.Question.QuestionTypeId, "Question Type")
+        @Html.DropDownListFor(x=>x.Question.QuestionTypeId, 
+                                new SelectList(Model.QuestionTypes,
+                                                "Id",
+                                                "Text"),
+                                "Select Question Type")
+    </div>
+
+    @Html.HiddenFor(x => x.Question.Id)
+    <button class="btn btn-primary" type="submit">Save</button>
+}
+

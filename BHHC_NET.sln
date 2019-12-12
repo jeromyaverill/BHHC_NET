@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BHHC_NET", "BHHC_NET\BHHC_NET.csproj", "{228EE3FB-597C-4FDD-A17F-E71CB8DD8CA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BHHC_NET.Tests", "BHHC_NET.Tests\BHHC_NET.Tests.csproj", "{24458468-DADE-43FC-9CA7-6BAF349A90A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{228EE3FB-597C-4FDD-A17F-E71CB8DD8CA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{228EE3FB-597C-4FDD-A17F-E71CB8DD8CA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{228EE3FB-597C-4FDD-A17F-E71CB8DD8CA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{228EE3FB-597C-4FDD-A17F-E71CB8DD8CA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24458468-DADE-43FC-9CA7-6BAF349A90A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24458468-DADE-43FC-9CA7-6BAF349A90A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24458468-DADE-43FC-9CA7-6BAF349A90A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24458468-DADE-43FC-9CA7-6BAF349A90A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0E9FB66F-87D6-4761-A227-EB1F1948226B}
+	EndGlobalSection
+EndGlobal

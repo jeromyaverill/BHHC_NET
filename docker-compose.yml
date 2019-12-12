@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  bhhc_net:
+    image: ${DOCKER_REGISTRY-}bhhcnet
+    build:
+      context: .\BHHC_NET
+      dockerfile: Dockerfile

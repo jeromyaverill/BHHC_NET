@@ -1,0 +1,18 @@
+﻿@model BHHC_NET.Models.QuestionType
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Question Type Form</h2>
+
+@using (Html.BeginForm("Save", "QuestionType"))
+{
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.Text, "Question Type")
+        @Html.TextBoxFor(x => x.Text)
+    </div>
+    @Html.HiddenFor(x => x.Id)
+    <button class="btn btn-primary" type="submit">Save</button>
+}

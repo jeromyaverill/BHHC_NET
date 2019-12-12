@@ -1,0 +1,41 @@
+﻿@model IEnumerable<BHHC_NET.Models.QuestionAnswer>
+
+@{
+    ViewBag.Title = "GetQuestionAnswers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetQuestionAnswers</h2>
+
+<p>
+    
+</p>
+<table id="qa" class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Question)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Answer)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Question)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Answer)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+
+

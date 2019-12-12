@@ -1,0 +1,22 @@
+﻿@model BHHC_NET.ViewModels.AnswerViewModel
+@{
+    ViewBag.Title = "AddCandAnswers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add Candidate Answers</h2>
+
+@using (Html.BeginForm("Save", "Answer"))
+{
+
+
+    <div>
+        @Html.DisplayFor(x => x.Questions[0].Text)
+        @Html.TextBoxFor(x => x.Answer.CandidateAnswer)
+    </div>
+
+    @Html.HiddenFor(x => x.Answer.Id)
+    @Html.HiddenFor(x => x.Candidate.Id)
+    @Html.HiddenFor(x => x.Questions[0].Id)
+    <button class="btn btn-primary" type="submit">Save</button>
+}

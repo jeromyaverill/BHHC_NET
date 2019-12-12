@@ -1,0 +1,46 @@
+﻿@model IEnumerable<BHHC_NET.Models.Answer>
+
+@{
+    ViewBag.Title = "GetCandAnswers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetCandAnswers</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Candidate.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Question.Text)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CandidateAnswer)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Candidate.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Question.Text)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CandidateAnswer)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
